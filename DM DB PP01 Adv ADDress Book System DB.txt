@@ -1,0 +1,46 @@
+UC1-
+CREATE DATABASE AddressBookService;
+
+
+UC2-
+CREATE TABLE address_book
+(
+first_name   VARCHAR(150) NOT NULL,
+last_name    VARCHAR(150) NOT NULL,
+address      VARCHAR(150) NOT NULL,
+city         VARCHAR(150) NOT NULL,
+state        VARCHAR(150) NOT NULL,
+zip          VARCHAR(150) NOT NULL,
+phone_number VARCHAR(150) NOT NULL,
+email        VARCHAR(150) NOT NULL
+);
+
+
+UC3-
+INSERT INTO address_book(first_name,last_name,address,city,state,zip,phone_number,email) values
+('Ram','Kapoor','101,MD Road','Jaipur','Rajasthan','302004','9983270514','ramkapoor@gmail.com'),
+('Shyam','Sundar','102,AB Road','Delhi','Delhi','123456','9983270515','shyamsundar@gmail.com'),
+('Radha','Kumari','103,GK Road','Jodhpur','Rajasthan','789101','9983270516','radhakumari@gmail.com');
+
+
+UC4-
+UPDATE address_book set last_name='Kishan' where first_name='Ram';
+
+
+UC5-
+DELETE FROM address_book where first_name='Shyam';
+
+
+UC6-
+SELECT * FROM address_book where state='Rajasthan';
+
+
+UC7-
+SELECT COUNT(*) FROM address_book where state='Rajasthan';
+
+
+UC8-
+SELECT * FROM address_book where state='Rajasthan' order by first_name;
+
+
+UC9-
